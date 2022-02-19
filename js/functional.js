@@ -27,6 +27,7 @@ function updateBalance(amount, isAdding) {
   }
   document.getElementById("balance-total").innerText = newBalance;
 }
+
 //handle Deposit
 document
   .getElementById("deposit-button")
@@ -35,6 +36,7 @@ document
     if (amount > 0) {
       updateTotal("deposit-total", amount);
       updateBalance(amount, true);
+      updateBalance("total-balance");
     }
   });
 
